@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <br />
+      <br />
+      <div class="d-flex justify-content-center">
+        <h3 class="me-2">
+          <u> Assignment-10 </u>
+        </h3>
+        <a
+          href="https://github.com/rohitvishwakarma-sf/Assignment-10"
+          target="_blank"
+        >
+          <img
+            style="max-block-size: 40px"
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="d-flex flex-row justify-content-center mt-4">
+        <button
+          class="btn btn-primary px-5 btn-lg me-1"
+          (click)="btnLoadClick()"
+          [attr.disabled]="loading ? 'disabled' : null"
+        >
+          <span
+            *ngIf="loading"
+            class="spinner-border spinner-border-sm"
+            role="status"
+            aria-hidden="true"
+          ></span>
+          {{ btnText }}
+        </button>
+      </div>
+      <hr />
+      <div *ngIf="users.length != 0">
+        <app-table [users]="users"></app-table>
+      </div>
+    </div>
+  </div>
+</div>
