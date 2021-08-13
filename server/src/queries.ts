@@ -6,7 +6,7 @@ class Queries {
   getAllUsers(request: Request, response: Response) {
     db.connect((err, client, done) => {
       if (err) throw err;
-      client.query(`select * from users`, (err, result) => {
+      client.query(`select *, (select name as "customerName" from customers where user_id = users.id) from users`, (err, result) => {
         done();
         if (err) {
           console.log(err.stack);

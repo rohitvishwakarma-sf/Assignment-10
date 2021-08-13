@@ -25,5 +25,7 @@ export class AppComponent implements OnInit {
     this.users = await this.usersService.getUsers();
     this.loading = false;
     this.btnText = 'Refresh';
+    console.log(this.users);
+    
   }
 }

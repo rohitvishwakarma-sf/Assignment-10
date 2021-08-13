@@ -14,6 +14,7 @@ id!: number;
   rolekey: Role;
   createdon?: string;
   modifiedon?: string;
+  customerName:string;
 
   constructor(
       id: number,
@@ -24,6 +25,7 @@ id!: number;
     phone: string,
     rolekey: Role,
     address: string,
+    customerName:string
   ) {
       this.id = id;
       this.firstname = firstName;
@@ -35,6 +37,7 @@ id!: number;
       this.address = address;
       this.createdon="";
       this.modifiedon="";
+      this.customerName = customerName;
     
   }
 

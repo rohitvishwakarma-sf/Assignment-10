@@ -56,6 +56,16 @@
   />
 </td>
 <td>
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="user.customerName"
+    [ngClass]="editMode ? 'edit' : 'no-edit'"
+    [attr.disabled]="'disabled'"
+  />
+</td>
+
+<td>
   <select
     [(ngModel)]="user.rolekey"
     class="form-select"
